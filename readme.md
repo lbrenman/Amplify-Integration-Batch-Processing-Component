@@ -9,6 +9,10 @@ In this post, we'll review two use cases of the Batch component:
 * Batch insert a large number of records to a database
 * Reduce processing time required to publish a large of number of messages to Apache Kafka
 
+You can see a screen recording of these use cases below:
+
+[![](https://markdown-videos-api.jorgenkh.no/youtube/IRlFSW2yQfo)](https://youtu.be/IRlFSW2yQfo)
+
 An export of the Amplify Integration project can be downloaded from [**Github**](https://github.com/lbrenman/Amplify-Integration-Batch-Processing-Component) as can a sample CSV file.
 
 ## Batch Insert to a Database
