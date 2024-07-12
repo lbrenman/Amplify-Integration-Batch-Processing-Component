@@ -30,7 +30,7 @@ However, what if your database can only handle a certain number of records (e.g.
 ![Image](https://i.imgur.com/DcK8gsh.png)
 ![Image](https://i.imgur.com/pJ0jvmG.png)
 
-If we review the transaction in the Monitor, we can see how a 5,000 row CSV file is split into 1,000 record simultaneous batches
+If we review the transaction in the Monitor, we can see how a 4,998 row CSV file is split into 1,000 record simultaneous batches
 
 ![Image](https://i.imgur.com/Q5eknZC.png)
 ![Image](https://i.imgur.com/tjklrbt.png)
@@ -39,6 +39,21 @@ We can also see how clicking the Reprocess button on the Batch component provide
 
 ![Image](https://i.imgur.com/mBrS6J8.png)
 
-For the 5,000 row CSV file, the non Batch version executed in 8.519 seconds. The Batch version executed in 10.72 seconds.
+For the 4,998 row CSV file, the non Batch version executed in 8.519 seconds. The Batch version executed in 10.72 seconds.
 
 ## Reduce Processing Time for Apache Kafa Publishing
+
+In this use case, we'll use FileZilla to SFTP a CSV file of employees to Amplify Integration. The integration will parse the file and publish the rows to Apache Kafka (self hosted in AWS EC2) in distributed batches as depicted below:
+
+![Image](https://i.imgur.com/p7E0JiM.png)
+
+The integration without the Batch component is shown below:
+
+![Image](https://i.imgur.com/qhIURtj.png)
+
+In order to improves overall throughput and reduces processing time, we can use the Batch process component as follows:
+
+![Image](https://i.imgur.com/QYR2his.png)
+![Image](https://i.imgur.com/I0lYyH3.png)
+
+For the 4,998 row CSV file, the non Batch version executed in 23:47.41 seconds. The Batch version executed in 9:47.212 seconds.
