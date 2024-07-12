@@ -56,4 +56,4 @@ In order to improves overall throughput and reduces processing time, we can use 
 ![Image](https://i.imgur.com/QYR2his.png)
 ![Image](https://i.imgur.com/I0lYyH3.png)
 
-For the 4,998 row CSV file, the non Batch version executed in 23:47.41 seconds. The Batch version executed in 9:47.212 seconds.
+For the 4,998 row CSV file, the non Batch version executed in 23.5 minutes. The Batch version executed in under 10 minutes.
