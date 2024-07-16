@@ -2,7 +2,7 @@
 
 The Amplify Integration [**Batch Component**](https://docs.axway.com/bundle/amplify_integration/page/system_components.html) handles large datasets by partitioning them into smaller batches. This enables parallel processing, which improves overall throughput and reduces processing time. It also helps breaking down large updates to back end applications that may have update limitations. For example, an API or Database that has a limit on the number of records that can be written at a time. In short, it helps in 3 ways: performance, over utilization of resources from Integration layer, and also remote DB/backend application/API protection.
 
-In one recent use case, the Batch component was used to process 4 1.2GB CSV files and upload the 8 Million records to MS SQL using streams.
+In one recent client implementation, the Batch component was used to process four 1.2GB CSV files and upload the 8 Million records to MS SQL using streams achieving all of the benefits of the Batch Processor component.
 
 As an added benefit, the Batch processor provides for reprocessing of failed records via the monitor and batch status variables that can be accessed in your integration.
 
